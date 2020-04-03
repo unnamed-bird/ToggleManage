@@ -1,0 +1,20 @@
+<!--# layout("/common/layout.html",{"jsBase":"/js/admin/toggle/"}){ -->
+<layui:searchForm formId="searchForm"  condition="${search}">
+</layui:searchForm>
+
+<div class="layui-btn-group">
+    <layui:accessButton function="toggle.add"  action="add">增加</layui:accessButton>
+    <layui:accessButton function="toggle.edit"  action="edit">编辑</layui:accessButton>
+    <layui:accessButton function="toggle.del"  action="del">删除</layui:accessButton>
+</div>
+
+<table id="toggleTable" lay-filter="toggleTable"></table>
+<!--#} -->
+<script>
+
+layui.use(['index'], function(){
+    var index = layui.index
+    index.init();
+});
+
+</script>

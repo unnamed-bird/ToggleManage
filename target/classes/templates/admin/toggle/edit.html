@@ -1,0 +1,88 @@
+<!--# layout("/common/layout.html",{"jsBase":"/js/admin/toggle/"}){ -->
+
+<form class="layui-form layui-form-pane" id="updateForm">
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">appId</label>
+				<div class="layui-input-inline">
+					<input type="text" id="appId" name="appId"  value="${toggle.appId}"   class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">开关名</label>
+				<div class="layui-input-inline">
+					<input type="text" id="name" name="name"  value="${toggle.name}"   class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">开关唯一键</label>
+				<div class="layui-input-inline">
+					<input type="text" id="nameKey" name="nameKey"  value="${toggle.nameKey}"   class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">开关描述</label>
+				<div class="layui-input-inline">
+					<input type="text" id="nameDesc" name="nameDesc"  value="${toggle.nameDesc}"   class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">负责人邮箱地址</label>
+				<div class="layui-input-inline">
+					<input type="text" id="ownerEmail" name="ownerEmail"  value="${toggle.ownerEmail}"   class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">开关状态</label>
+				<div class="layui-input-inline">
+					<input type="text" id="status" name="status"  value="${toggle.status}"   class="layui-input" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">开关类型</label>
+				<div class="layui-input-inline">
+					<input type="text" id="type" name="type"  value="${toggle.type}"   class="layui-input" >
+				</div>
+            </div>
+            <div class="layui-inline">
+            <label class="layui-form-label">创建时间</label>
+				<div class="layui-input-inline">
+					<input type="text" id="createtime" name="createtime"  value="${toggle.createtime,"yyyy-MM-dd"}"   class="layui-input input-date" >
+				</div>
+            </div>
+        </div>
+    </div>
+    <div class="layui-row">
+        <div class="layui-form-item">
+            <div class="layui-inline">
+            <label class="layui-form-label">更新时间</label>
+				<div class="layui-input-inline">
+					<input type="text" id="updatetime" name="updatetime"  value="${toggle.updatetime,"yyyy-MM-dd"}"   class="layui-input input-date" >
+				</div>
+            </div>
+        </div>
+    </div>
+	<!-- 业务对象须有hidden字段，保存delFlag和version字段-->
+    <input type="hidden" name="id" value=${toggle.id} />
+    <layui:submitButtons id="updateButton" />
+</form>
+<!--#} -->
+<script>
+layui.use(['edit'], function(){
+    var toggleEdit = layui.edit
+    toggleEdit.init();
+});
+</script>
